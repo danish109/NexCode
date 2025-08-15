@@ -114,7 +114,7 @@ function App() {
           <Route path="/login" element={isAuthenticated ? <Navigate to="/home" /> : <Login />} />
           <Route path="/signup" element={isAuthenticated ? <Navigate to="/home" /> : <Signup />} />
           <Route path="/admin" element={isAuthenticated && user?.role === 'admin' ? <Admin /> : <Navigate to="/" />} />
-          <Route path="/discuss" element={isAuthenticated  ? <Discuss /> : <Navigate to="/" />} />
+          <Route path="/discuss" element={isAuthenticated  ? <Discuss /> : <Navigate to="/discuss" />} />
           <Route path="/admin/create" element={isAuthenticated && user?.role === 'admin' ? <AdminPanel /> : <Navigate to="/" />} />
           <Route path="/admin/delete" element={isAuthenticated && user?.role === 'admin' ? <AdminDelete /> : <Navigate to="/" />} />
           <Route path="/admin/video" element={isAuthenticated && user?.role === 'admin' ? <AdminVideo /> : <Navigate to="/" />} />
